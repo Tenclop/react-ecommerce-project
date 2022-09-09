@@ -97,14 +97,14 @@ const filter_reducer = (state, action) => {
       );
     }
 
-    //colors
+    // colors
     if (color !== "all") {
       tempProducts = tempProducts.filter((product) => {
         //check in the array if the product has that color
-        return product.color.find((c) => c === color);
+
+        return product.colors.find((c) => c === color);
       });
     }
-
     //price
     tempProducts = tempProducts.filter((product) => product.price <= price);
     //shipping
